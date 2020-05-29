@@ -15,10 +15,13 @@ document.getElementById('addBurger').addEventListener('click', event =>{
     burger_name: document.getElementById('burger_name').value
   })
     // update the burger list on page to reflect added burger
-    .then(() =>{
+    .then(({ data }) =>{
       let burgerElem = document.createElement('li')
       // set text content to be burger typed into the input
-      burgerElem.textContent = document.getElementById('burger_name').value
+      burgerElem.innerHTML = `
+      ${document.getElementById('burger_name').value}
+       <button class="devour" data-id="${data.insertId}">Devour</button>
+      `
       //append input onto burger list
       document.getElementById('userBurgerName').append(burgerElem)
     })
