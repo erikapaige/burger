@@ -5,7 +5,7 @@ const { Burger } = require('../models')
 
 router.get('/', (req, res) => {
   //res.render to make sure localhost working
-  res.render('index')
+  // res.render('index')
   //instead of rendering, get data then have it render
   Burger.getBurgers(burgers =>{
     //render index hbs, pass it an object (burger data)
