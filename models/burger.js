@@ -1,5 +1,7 @@
+// bring in orm from orm file
 const orm = require('../config/orm.js')
 
+// queries using burgers
 module.exports = {
   getBurgers(cb) {
     orm.getAll('burgers', burgers => cb(burgers))

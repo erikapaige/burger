@@ -1,5 +1,7 @@
+// bring in connection to mysql database
 const db = require('./connection.js')
 
+// set all queries to be made to database
 module.exports = {
   getAll(table, cb) {
     db.query(`SELECT * FROM ${table}`, (err, data) => {
