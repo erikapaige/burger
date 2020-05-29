@@ -13,4 +13,8 @@ router.post('/burgers', (req, res) => Burger
 router.put('/burgers/:id', (req, res) => Burger
   .updateBurger(req.body, { id: req.params.id }, info => res.json(info)))
 
+// DELETE burger
+router.delete('/burgers/:id', (req, res) => Burger
+  .deleteBurger({ id: req.params.id }, info => res.json(info)))
+
 module.exports = router

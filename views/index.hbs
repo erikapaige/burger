@@ -1,5 +1,3 @@
-<h1>Hello World</h1>
-
 <form>
   <p>
     <label for="burger_name"> Name a burger!</label>
@@ -8,11 +6,16 @@
   <button id="addBurger">Add Burger</button>
 </form>
 
-{{!-- use 'each loop' to go through each burger and have mark-up appear for each one --}}
-{{#each burgers}}
+{{!-- unordered list to store burgers and names --}}
+<ul id="userBurgerName">
+  {{!-- use 'each loop' to go through each burger and have mark-up appear for each one --}}
+  {{#each burgers}}
+    <li>
+        {{!-- want to grab burger name off of each object, use dot notation to grab each individual --}}
+        {{this.burger_name}}
+        <button class="devour" data-id="{{this.id}}">Devour</button>
 
-{{!-- want to grab burger name off of each object, use dot notation to grab each individual --}}
-{{this.burger_name}}
-
-{{!-- closing bracket to 'each' --}}
-{{/each}}
+    </li>
+  {{!-- closing bracket to 'each' --}}
+  {{/each}}
+</ul>

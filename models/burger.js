@@ -11,5 +11,8 @@ module.exports = {
   },
   updateBurger(changes, where, cb) {
     orm.updateOne('burgers', changes, where, info => cb(info))
+  },
+  deleteBurger(where, cb) {
+    orm.deleteOne('burgers', where, info => cb(info))
   }
 }

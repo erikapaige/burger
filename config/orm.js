@@ -20,5 +20,11 @@ module.exports = {
       if (err) { console.log(err) }
       cb(info)
     })
+  },
+  deleteOne(table, where, cb) {
+    db.query(`DELETE FROM ${table} WHERE ?`, where, (err, info) => {
+      if (err) { console.log(err) }
+      cb(info)
+    })
   }
 }
