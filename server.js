@@ -10,7 +10,7 @@ app.use(express.json())
 // app.engine('.hbs', require('express-handlebars')({ extname: '.hbs' }))
 // app.set('view engine', '.hbs')
 
-// app.use(require('./routes'))
+app.use(require('./controllers/index.js'))
 
 
 app.listen(process.env.PORT, () => console.log('http://localhost:3000'))

@@ -1,16 +1,16 @@
 const router = require('express').Router()
 const { Burger } = require('../models')
 
-// GET all movies
-router.get('/movies', (req, res) => Movie
-  .getMovies(movies => res.json(movies)))
+// GET all burgers
+router.get('/burgers', (req, res) => Burger
+  .getBurgers(burgers => res.json(burgers)))
 
-// POST one movie
-router.post('/movies', (req, res) => Movie
-  .addMovie(req.body, info => res.json(info)))
+// POST one burger
+router.post('/burgers', (req, res) => Burger
+  .addBurger(req.body, info => res.json(info)))
 
-// PUT one movie
-router.put('/movies/:id', (req, res) => Movie
-  .updateMovie(req.body, { id: req.params.id }, info => res.json(info)))
+// PUT one burger
+router.put('/burgers/:id', (req, res) => Burger
+  .updateBurger(req.body, { id: req.params.id }, info => res.json(info)))
 
 module.exports = router

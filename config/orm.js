@@ -1,4 +1,4 @@
-const connection = require('./connection.js')
+const db = require('./connection.js')
 
 module.exports = {
   getAll(table, cb) {
