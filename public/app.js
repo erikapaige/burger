@@ -1,10 +1,11 @@
+// WORKING APP.JS
 // check connected to handlebars
 // console.log('test')
 
 //interact with form from hbs
 
 // make button clickable
-document.getElementById('addBurger').addEventListener('click', event =>{
+document.getElementById('addBurger').addEventListener('click', event => {
   event.preventDefault()
   // use console.log check to see if evenListener is working
   // console.log('test')
@@ -13,10 +14,9 @@ document.getElementById('addBurger').addEventListener('click', event =>{
   axios.post('/api/burgers', {
     //pass it an object, from user's input
     burger_name: document.getElementById('burger_name').value
-    devoured: document.get
   })
     // update the burger list on page to reflect added burger
-    .then(({ data }) =>{
+    .then(({ data }) => {
       let burgerElem = document.createElement('li')
       // set text content to be burger typed into the input
       burgerElem.innerHTML = `
@@ -24,7 +24,8 @@ document.getElementById('addBurger').addEventListener('click', event =>{
       <button class="devour" data-id="${data.insertId}">Devour</button>
       `
       //append input onto burger list
-      document.getElementById('userBurgerName').append(burgerElem)
+      document.getElementById('devour').append(burgerElem)
     })
-    .catch(err => console.error(err)) 
+    .catch(err => console.error(err))
 })
+

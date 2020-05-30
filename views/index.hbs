@@ -1,3 +1,7 @@
+<h1>The Buzz About Burgers</h1>
+<img id="burgerGraphic" src="assets/burgerGraphic.png" alt="graphic of burger">
+
+
 {{!-- form to receive user input --}}
 <div>
   <form>
@@ -10,21 +14,33 @@
     <button id="addBurger">Add Burger</button>
   </form>
 </div>
+
 <container class="ulContainer">
-{{!-- unordered list to store burgers and names --}}
-<ul class="userBurgerName">
-  {{!-- use 'each loop' to go through each burger and have mark-up appear for each one --}}
-  {{#each burgers}}
-    <li class="userBurgerInput">
+  {{!-- unordered list to store burgers and names --}}
+  <div id="notDevoured">
+    <ul id="devour">
+      {{!-- use 'each loop' to go through each burger and have mark-up appear for each one --}}
+      {{#each burgers}}
+      <li class="userBurgerInput">
         {{!-- want to grab burger name off of each object, use dot notation to grab each individual burger name--}}
         {{this.burger_name}}
+
         {{!-- this.id grabs the primary key id off each burger --}}
         <button class="devour" data-id="{{this.id}}">Devour</button>
+      </li>
+      {{!-- closing bracket to 'each' --}}
+      {{/each}}
+    </ul>
+  </div>
 
-    </li>
-  {{!-- closing bracket to 'each' --}}
-  {{/each}}
-</ul>
-
-
+<div id="burgerDevoured">
+  <ul id='devoured'>
+    {{#each devoured}}
+      <li class="userBurgerInput">
+        {{this.burger_name}}
+        <li>Test</li>
+      </>
+    {{/each}}
+  </ul>
+</div>
 </container>
