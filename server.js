@@ -1,4 +1,4 @@
-// require('dotenv').config()
+require('dotenv').config()
 const express = require('express')
 // bring in path for express static middlewear
 const { join } = require('path')
