@@ -1,4 +1,6 @@
+// bring in npm dotenv package to format file
 require('dotenv').config()
+// bring in npm package express for routers
 const express = require('express')
 // bring in path for express static middlewear
 const { join } = require('path')
