@@ -1,15 +1,14 @@
 {{!-- form to receive user input --}}
-<div>
-  <form>
-    <p>
-      {{!-- input box for user to enter burger name  --}}
-      <label for="burger_name"> Name a burger!</label>
-      <input type="text" name="burger_name" id="burger_name">
-    </p>
-    {{!-- button for user to submit burger name --}}
-    <button id="addBurger">Add Burger</button>
-  </form>
-</div>
+<form>
+  <p>
+    {{!-- input box for user to enter burger name  --}}
+    <label for="burger_name"> Name a burger!</label>
+    <input type="text" name="burger_name" id="burger_name">
+  </p>
+  {{!-- button for user to submit burger name --}}
+  <button id="addBurger">Add Burger</button>
+</form>
+
 <container class="ulContainer">
 {{!-- unordered list to store burgers and names --}}
 <ul id="userBurgerName">

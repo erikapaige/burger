@@ -13,7 +13,7 @@ document.getElementById('addBurger').addEventListener('click', event =>{
   axios.post('/api/burgers', {
     //pass it an object, from user's input
     burger_name: document.getElementById('burger_name').value
-    devoured: document.get
+    // devoured: document.getElementById
   })
     // update the burger list on page to reflect added burger
     .then(({ data }) =>{
