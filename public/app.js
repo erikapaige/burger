@@ -30,7 +30,6 @@ document.getElementById('addBurger').addEventListener('click', event => {
 })
 
 // add event listener to 'devour button'
-//   create a variable set to data.id from button
 //   create a variable equal to 1 (or true)
 //   on click use PUT axios 
 //   append to other list
