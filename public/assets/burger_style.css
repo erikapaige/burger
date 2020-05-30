@@ -4,11 +4,16 @@
   height: 500px;
 } */
 
+.wrapper {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-h1{
+h1 {
   text-align: center;
 }
 
-ul{
+ul {
   padding: 0px;
 }
