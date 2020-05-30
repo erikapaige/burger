@@ -26,7 +26,7 @@
         {{this.burger_name}}
 
         {{!-- this.id grabs the primary key id off each burger --}}
-        <button class="devour" data-id="{{this.id}}">Devour</button>
+        <button className="devour" data-id="{{this.id}}">Devour</button>
       </li>
       {{!-- closing bracket to 'each' --}}
       {{/each}}
@@ -38,8 +38,7 @@
     {{#each devoured}}
       <li class="userBurgerInput">
         {{this.burger_name}}
-        <li>Test</li>
-      </>
+      </li>
     {{/each}}
   </ul>
 </div>

@@ -30,13 +30,27 @@ document.getElementById('addBurger').addEventListener('click', event => {
     .catch(err => console.error(err))
 })
 
-//click devoured button, 
-document.getElementById('devour').addEventListener('click', event => {
-  event.preventDefault()
-  // console.log to check evenListener working
-  // console.log('test')
-  if(event.target.className === 'devoured') {
-    axios.put(`/api/burgers/${event.target.dataset.id}`)
+// click devoured button
+addEventListener('click', event => {
+  //class is taken from button class name
+  if (event.target.className === 'devour') {
+    axios.put(`/api/burgers/${event.target.dataset.id}`, { devoured: true })
+      .then(({ data }) => {
+        // console.log(data)
+        const devElem = document.createElement('li')
+        devElem.innerHTML = `${event.target.value}`
+        document.getElementById('devoured').append(devElem)
+      })
+      .catch(err => console.log(err))
   }
-
 })
+
+// do filter array
+  // loops through array for objects set to not devour
+  // put it on the unordered list "notDevoured"
+
+// do an array that filters
+  // keep ones that are devoured
+
+//make a new var that is an array, 1 that loops though is devoured adds to new array
+//not devoured adds to another array 
