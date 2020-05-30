@@ -1,4 +1,6 @@
+//establish connection to express
 const router = require('express').Router()
+//bring in Models file
 const { Burger } = require('../models')
 
 // GET all burgers
