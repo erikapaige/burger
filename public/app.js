@@ -31,25 +31,27 @@ document.getElementById('addBurger').addEventListener('click', event => {
 
 
 // click devoured button
-// addEventListener('click', event => {
-//   // filter the event object
-//   // if click event equal to devour THEN do PUT
-//   if (event.target.className === 'devour') {
-//     // PUT only happens if click event is equal to devour button, matched to it's id
-//     axios.put(`/api/burgers/${event.target.dataset.id}`, { devoured: true })
-//       .then(({ data }) => {
-//         // check data
-//         // console.log(data)
-//         // //grab targets parentNode
-//         // event.target.parentNode.innerHTML=''
-//         // let devourBurgElem = document.createElement('li')
-//         // devourBurgElem.innerHTML = `${event.target.value}`
-//         // //append devoured 
-//         // document.getElementById('devoured').append(devourBurgElem)
-//       })
-//       .catch(err => console.log(err))
-//   }
-// })
+document.getElementById('devour').addEventListener('click', event => {
+  // console.log('test')
+  // filter the event object
+  // if click event equal to devour THEN do PUT
+  // have event listener affect whole page
+  if (event.target.className === 'devour') {
+    // PUT only happens if click event is equal to devour button, matched to it's id
+    axios.put(`/api/burgers/${event.target.dataset.id}`, { devoured: true })
+      .then(({ data }) => {
+        // check data
+        // console.log(data)
+        let devourBurgElem = document.createElement('li')
+        devourBurgElem.innerHTML = `${event.target.value}`
+        //grab targets parentNode
+        event.target.parentNode.innerHTML = `{document.getElementById('burger_name').value}`
+        //append devoured 
+        document.getElementById('devoured').append(devourBurgElem)
+      })
+      .catch(err => console.log(err))
+  }
+})
 
 
 // add event listener to 'devour button'
@@ -59,15 +61,23 @@ document.getElementById('addBurger').addEventListener('click', event => {
   // append to other list
   // once devoured button is clicked and set to true, reload burger db
   // all items set to true go on right side, all items set to false stay on left
-document.getElementById('devourButton').addEventListener('click', event => {
-  let getId = data.id
-  let id = 1
-  axios.put(/)
-})
-})
+// document.getElementById('devourButton').addEventListener('click', event => {
+//   console.log('test')
+  // //create variable set it to
+  // let getId = data.id
+  // //set id equal to true
+  // let id = 1
+
+  // //gab burger by primary id and devoured
+  // axios.put(`/api/burgers/${event.target.dataset.id}`, { devoured: true })
+  //   .then(({ data }) => {
+  //     console.log(data)
+  //   })
+  //   .cath(err => console.error(err))
+// })
 
 
-ALTERNATIVE OPTIONS for solving
+//ALTERNATIVE LOGIC OPTIONS for solving
 // do filter array
   // loops through array for objects set to not devour
   // put it on the unordered list "notDevoured"

@@ -1,8 +1,6 @@
 body {
   text-align: center;
-  /* background: green;
-  width: 100%;
-  height: 500px; */
+ margin: 30px;
 }
 
 h1 {
@@ -36,7 +34,7 @@ li {
   justify-content: center;
   align-content: center;
   text-align: left;
-  background-color: red;
+  background-color: yellow;
 }
 
 #burgerDevoured {
@@ -48,4 +46,40 @@ li {
   align-content: center;
   text-align: left;
   background-color: green;
+}
+
+/* formatting for border image  */
+#top, #bottom, #left, #right {
+  background:red;
+  position: fixed;
+}
+
+#left, #right {
+  top: 0;
+  bottom: 0;
+  width: 15px;
+}
+
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
+#top, #bottom {
+  left: 0;
+  right: 0;
+  height: 15px;
+}
+
+#top {
+  top: 0;
+}
+
+#bottom {
+  bottom: 0;
+}
+
 }
