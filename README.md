@@ -25,7 +25,7 @@ If the dependencies listed above did not appear in your package.json file after 
 The Buzz About Burgers is a restaurant application that allows users to input the name of burgers they would like to eat. When a user submits a burger it will display on the left side of the screen, waiting to be devoured. When the user clicks the "Devour" button; the burger moves to the other side of the page. Each burger submitted is stored in a MYSQL database.
 
 ## Links
-The full application can be viewed on this heroku link: https://guides.github.com/features/mastering-markdown/
+The full application can be viewed on this heroku link: https://fierce-chamber-18329.herokuapp.com/
 <br>
 <br>
 <br>
