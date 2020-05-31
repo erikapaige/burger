@@ -1,27 +1,25 @@
 # burger
 
 The Buzz About Burgers is a restaurant application that allows users to input the name of burgers they would like to eat. 
-![Burger Graphic](/public/assets/burgerGraphic.png)
- [Link to Site](https://guides.github.com/features/mastering-markdown/)
+![Burger Graphic](/public/assets/fullSiteRender.png)
 
 ## Installation
 The software used to create this generator include: Javascript, Node.js, MySQL2, ENV, Express Handlebars and Express.
 
-**Please use the below commands to install the NPM dependencies. Upon installation, confirm that all the packages were installed and appear in your package.json file.**
+**Please use 'npm init -y' to install the NPM dependencies. Upon installation, confirm that all the packages were installed and appear in your package.json file.**
 <br>
-* npm init -y
 <br> 
-* If the dependencies listed above did not appear in your package.json file after running npm init-y, please run the following commands:
+If the dependencies listed above did not appear in your package.json file after running npm init-y, please run the following commands:
 <br>
-  * MYSQL: npm i mysql2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MYSQL: npm i mysql2
 <br>
-  * ENV: npm i dotenv
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENV: npm i dotenv
 <br> 
-  * EXPRESS HANDLEBARS: npm i express-handlebars
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EXPRESS HANDLEBARS: npm i express-handlebars
 <br>
-  * EXPRESS: npm i express
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EXPRESS: npm i express
 <br>
-  * EXPRESS HANDLEBARS: npm i express-handlebars
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EXPRESS HANDLEBARS: npm i express-handlebars
 
 ## Usage
 The Buzz About Burgers is a restaurant application that allows users to input the name of burgers they would like to eat. When a user submits a burger it will display on the left side of the screen, waiting to be devoured. When the user clicks the "Devour" button; the burger moves to the other side of the page. Each burger submitted is stored in a MYSQL database.
