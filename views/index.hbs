@@ -18,26 +18,34 @@
   {{!-- unordered list to store burgers and names --}}
   <div id="notDevoured">
     <ul id="devour">
-      {{!-- use 'each loop' to go through each burger and have mark-up appear for each one --}}
+      <p class="eatTitle">EAT ME</p>
+      {{!-- use 'each loop' to go through each burger and have mark-up appear for each one and check if devoured is false --}}
       {{#each burgers}}
+      {{#unless devoured}}
       <li class="userBurgerInput">
         {{!-- want to grab burger name off of each object, use dot notation to grab each individual burger name--}}
         {{this.burger_name}}
 
-        {{!-- this.id grabs the primary key id off each burger --}}
-        <button className="devour" id="devourButton" data-id="{{this.id}}">Devour</button>
+        {{!-- this.id grabs the primary key id off each burger, on-click checks if true or false --}}
+        <button className="devour" id="devourButton" data-id="{{this.id}}" onclick="devourBurger({{this.id}})">Devour</button>
       </li>
-      {{!-- closing bracket to 'each' --}}
+      {{!-- closing bracket to 'each' and 'unless' --}}
+      {{/unless}}
       {{/each}}
     </ul>
   </div>
 
+{{!-- unordered list (on right side) of burgers and names devoured --}}
 <div id="burgerDevoured">
-  <ul id='devoured'>
-    {{#each devoured}}
+  <ul id="devouredBurger">
+    <p class="eatTitle">YUM, that was delicious</p>
+    {{!-- use 'each loop' to go through each burger and if devoured (aka true) move to this list --}}
+    {{#each burgers}}
+    {{#if devoured}}
       <li class="userBurgerInput" id="yum">
         {{this.burger_name}}
       </li>
+    {{/if}}
     {{/each}}
   </ul>
 </div>

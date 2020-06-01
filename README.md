@@ -33,4 +33,4 @@ The full application can be viewed on this heroku link: https://fierce-chamber-1
 #### NOTES ABOUT THE PROCESS
 It a great practice in setting up a full directory structure and linking various parts of the application. (Learning the Handelbars structure and how it relates to the public folder was a learning experience in GoogleFu.)
 
-It felt rewarding each time a different route rendered and the server.js was still running. My 'add burger' button does render burgers that add to the page with a 'devour' button. However, the process was not without its challenges. The 'devour' button has an event listener. But, I was unable to solve making the burger jump to the other side of the page. Per the instructions, I did pseudoscode the possible solution. 
+It felt rewarding each time a different route rendered and the server.js was still running. My 'add burger' button does render burgers that add to the page with a 'devour' button. Clicking 'devour' moves the burger to the right side. 

@@ -1,6 +1,6 @@
 body {
   text-align: center;
- margin: 30px;
+  margin: 30px;
 }
 
 h1 {
@@ -26,6 +26,13 @@ li {
   height: 400px;
 }
 
+.eatTitle {
+  font-size: medium;
+  font-weight: bolder;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #notDevoured {
   display: flex;
   height: flex;
@@ -35,6 +42,9 @@ li {
   align-content: center;
   text-align: left;
   background-color: yellow;
+  font-size: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 50px;
 }
 
 #burgerDevoured {
@@ -46,11 +56,15 @@ li {
   align-content: center;
   text-align: left;
   background-color: green;
+  font-size: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 50px;
 }
 
 /* formatting for border image  */
+
 #top, #bottom, #left, #right {
-  background:red;
+  background: red;
   position: fixed;
 }
 
@@ -80,6 +94,4 @@ li {
 
 #bottom {
   bottom: 0;
-}
-
 }
