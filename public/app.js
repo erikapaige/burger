@@ -24,16 +24,15 @@ document.getElementById('addBurger').addEventListener('click', event => {
 })
 
 const devourBurger = (id => {
-  console.log(id)
-  // axios.put(`/api/burgers/${id}`, {
-  //   //set devour state to true
-  //   devoured: true})
-  //   .then(({ data }) => {
-  //     // console.log data to check, not rendering anything
-  //     // console.log(data)
-  //     location.reload()
-  //   })
-  //   .cath(err => console.error(err))
+  axios.put(`/api/burgers/${id}`, {
+    //set devour state to true
+    devoured: true})
+    .then(({ data }) => {
+      // console.log data to check, not rendering anything
+      // console.log(data)
+      location.reload()
+    })
+    .cath(err => console.error(err))
   })
 
 
